@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    font-family: "Dana";
+    src: url('../fonts/Dana/DanaFaNum-DemiBold.woff2') format('woff2');
+}
+@font-face {
+    font-family:"Morabba";
+    src: url('../fonts/Morabba/woff2/Morabba-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Morabba-light";
+    src: url('../fonts/Morabba/woff2/Morabba-Light.woff2') format('woff2');
+}
+
+@theme {
+    /* colors item */
+    --color-tahiti: #3ab7bf;
+    --color-primary: #FED7AA;
+    --color-primary2 : #FDBA74;
+    /* colors bg item */
+    --color-bg-header: #00000080;
+    --color-bg-primary : #FED7AA33; 
+    --color-bg-dark-primary : #3F3F46;
+    /* fonts project */
+    --font-morabba : Morabba;
+    --font-morabba-light : Morabba-light;
+    --font-dana: Dana;
+    /* size project  */
+    --breakpoint-mobile :55rem;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.colors-primary {
+    li:hover {
+        color: var(--color-primary);
+        transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        -moz-transition: all .2s ease-in;
+        -ms-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        cursor: pointer;
+    }
+}
