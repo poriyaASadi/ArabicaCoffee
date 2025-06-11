@@ -29,8 +29,11 @@
     --font-dana: Dana;
     /* size project  */
     --breakpoint-mobile :55rem;
+    --breakpoint-sm-mobile : 400px;
 }
-
+.rgba-linear-dark {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
 .container {
     max-width: 1920px;
     margin: 0 auto;

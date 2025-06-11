@@ -1,9 +1,9 @@
 <template>
-    <div :class="['fixed top-0 w-[256px] h-screen bg-white z-20 transition-all duration-300',
+    <div :class="['fixed top-0 w-[256px] h-screen bg-white dark:*:text-white overflow-y-auto dark:bg-bg-dark-primary z-30 transition-all duration-300',
     props.isShow ? 'right-0' : '-right-[256px]']">
-        <div>
+        <div class="px-3">
             <!-- title -->
-            <div class="flex items-center flex-row-reverse justify-between p-3 border-b border-[#F3F4F6]">
+            <div class="flex items-center flex-row-reverse justify-between py-3 border-b border-[#F3F4F6] dark:border-[#FFFFFF1A]">
                 <div class="flex items-center gap-x-1.5">
                     <img src="/public/images/svgs/app-logo-type.svg" alt="logo">
                     <img src="/public/images/svgs/logo.svg" alt="logo">
@@ -15,11 +15,11 @@
                     </svg>
                 </span>
             </div>
-            <div class="p-3 border-b border-[#F3F4F6]">
+            <div class="py-3 border-b border-[#F3F4F6] dark:border-[#FFFFFF1A]">
                 <ul class="font-dana colors-primary">
                     <li class="my-3">
                         <div
-                            class="flex items-center flex-row-reverse gap-x-2 bg-bg-primary text-primary2 rounded-sm cursor-pointer  p-3">
+                            class="flex items-center flex-row-reverse gap-x-2 bg-bg-primary text-primary2 rounded-md cursor-pointer  p-3">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -94,7 +94,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="p-3">
+            <div class="py-3">
                 <ul class="font-dana">
                     <li class="my-2">
                         <div class="flex items-center p-3 flex-row-reverse gap-x-2 text-primary2">

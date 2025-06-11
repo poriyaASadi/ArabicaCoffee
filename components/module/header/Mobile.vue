@@ -1,7 +1,7 @@
 <template>
     <div class="!overflow-x-hidden">
     <header class="w-full relative mobile:hidden bg-white dark:bg-bg-dark-primary p-3 px-4 flex items-center justify-between flex-row-reverse">
-        <div @click="switchSideBar">
+        <div @click="switchSideBar" class="dark:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-7 cursor-pointer">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -10,7 +10,7 @@
         <div>
             <img src="/public/images/svgs/app-logo-type.svg" alt="app-logo">
         </div>
-        <div>
+        <div class="dark:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-7 cursor-pointer">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -19,6 +19,7 @@
         </div>
     </header>
        <Sidebar :isShow="showSide" v-model:isShow="showSide" />
+       <div v-if="showSide" @click.self="switchSideBar" class="absolute cursor-pointer top-0 left-0 w-full h-full rgba-linear-dark z-20"></div>
     </div>
 </template>
 <script setup lang="js">
@@ -27,4 +28,11 @@ const showSide = ref(false);
 function switchSideBar() {
   showSide.value = !showSide.value;
 }
+watch(showSide, (newVal) => {
+  if (newVal) {
+    document.body.style.overflowY = 'hidden'; // اسکرول y غیرفعال
+  } else {
+    document.body.style.overflowY = ''; // اسکرول به حالت پیش‌فرض برگردد
+  }
+});
 </script>
