@@ -1,9 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
-   modules: [
-    '@nuxtjs/color-mode'
-  ],
+   modules: ['@nuxtjs/color-mode', 'nuxt-swiper', '@nuxt/icon'],
   colorMode : {
        classPrefix: '',
     classSuffix: '',
