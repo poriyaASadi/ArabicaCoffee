@@ -2,7 +2,7 @@
     <div
         class="shadow-lg w-full sm-mobile:max-w-[260px] max-h-[467px] min-h-[273px] rtl:*:text-right rounded-lg p-2 bg-white dark:bg-bg-dark-primary">
         <div class="flex items-center justify-center relative">
-            <img src="/images/products/p2.png" class="max-w-[180px] h-full mobile:max-w-full" alt="product-">
+            <img :src="props?.image" class="max-w-[180px] h-full mobile:max-w-full" alt="product-">
             <div class="absolute right-3 top-3 w-10 h-5.5 flex items-center justify-center rounded-full bg-primary2 text-black text-sm">
                 13%
             </div>
@@ -41,3 +41,11 @@
         </div>
     </div>
 </template>
+<script setup lang="js">
+const props = defineProps({
+    image : {
+        type : String,
+        required : true
+    }
+})
+</script>

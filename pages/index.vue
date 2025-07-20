@@ -6,7 +6,7 @@
             <ul
                 class="grid sm-mobile:grid-cols-2 *:mx-auto justify-center items-center gap-4 sm:grid-cols-3 mobile:grid-cols-4 ">
                 <li v-for="(item, index) in 8" :key="index">
-                    <CartProduct />
+                    <CartProduct image="/images/products/p3.png" />
                 </li>
             </ul>
             <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -21,8 +21,39 @@
                 </li>
             </ul>
             <section>
-                <SliderProduct/>
+                <SliderProduct />
             </section>
+            <section>
+                <div class="my-10">
+                    <ul class="flex p-3 gap-3 flex-col  sm-mobile:px-6 rounded-md items-center bg-green1 justify-between sm:flex-row-reverse">
+                        <li class="w-full">
+                            <div class="flex items-center justify-center gap-3 flex-row-reverse">
+                                <img src="/images/club/diamond.png" alt="diamond">
+                                <div class="flex flex-col gap-y-3 items-end">
+                                    <h2 class="dark:text-white font-morabba text-3xl text-white">کافی کلاب</h2>
+                                    <p class="font-morabba-light text-right text-white">میدونستی میتونی با امتیازهات قهوه بگیری؟</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="flex items-center flex-row-reverse w-full justify-center gap-3">
+                            <div class="flex items-center justify-center gap-3 *:h-14 *:flex *:justify-center *:items-center *:w-14 *:rounded-lg *:bg-white">
+                                <div><img src="/images/club/Ticket-Star.svg" alt=""/></div>
+                                <div><img src="/images/club/Activity.svg" alt=""></div>
+                                <div><img src="/images/club/Discovery.svg" alt=""></div>
+                            </div>
+                              <div class="flex flex-col items-center *:text-white justify-center gap-1">
+                                <span class="text-2xl">543</span>
+                                <p class="font-morabba-light">امتیاز شما</p>
+                                <button class="flex items-center bg-primary2 text-sm md:text-base text-white p-2 rounded-full cursor-pointer">
+                                    <Icon name="fe:arrow-left" class="" />
+                                    دریافت جایزه
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
         </section>
     </div>
 </template>
