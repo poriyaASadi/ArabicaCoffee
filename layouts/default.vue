@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white dark:bg-[#27272A]">
         <Mobile />
-        <section
+         <section
             class="relative mobile:bg-[url(/images/headerBgDesktop.webp)] bg-no-repeat z-10 px-3  min-h-[25rem] mobile:h-screen pt-5">
             <img src="/images/headerBgMobile.webp" alt="app-logo"
                 class="absolute object-cover top-0 left-0 -z-10 min-h-full mobile:hidden w-full">
@@ -16,11 +16,13 @@
                     </svg>
                 </div>
             </div>
-        </section>
+         </section>
         <slot />
+        <Footer/>
     </div>
 </template>
 <script setup lang="js">
 import Header from '~/components/Header.vue';
+import Footer from '~/components/module/footer/Footer.vue';
 import Mobile from '~/components/module/header/Mobile.vue';
 </script>

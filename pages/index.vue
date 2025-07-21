@@ -53,7 +53,89 @@
                     </ul>
                 </div>
             </section>
-            
+            <section>
+                <div class="flex items-center flex-row-reverse justify-between">
+                    <h2 class="text-3xl">مطالب خواندنی</h2>
+                    <NuxtLink to="" class="text-primary2 flex items-center cursor-pointer">
+                        <Icon name="fe:arrow-left" />
+                        مشاهده همه 
+                    </NuxtLink>
+                </div>
+                <div class="mt-6">
+                    <ul class="grid grid-cols-1 sm-mobile:grid-cols-2  sm:grid-cols-3 md:grid-cols-4 gap-2">
+                        <li v-for="(item , index) in 4" :key="index" class="bg-slate-100 dark:bg-bg-dark-primary p-2 rounded-lg cursor-pointer">
+                            <div>
+                                <img :src="`/images/blogs/blog-${index + 1}.png`" class="rounded-lg w-full h-52 object-cover transform hover:rotate-1" alt="poster-blog">
+                                <div class="flex items-center flex-row-reverse py-2 justify-between">
+                                    <div>
+                                        <p class="text-right leading-7 font-morabba-light">یک نوشیدنی هیجان انگیز و پرکالری برای شروع روز</p>
+                                    </div>
+                                    <div class="flex flex-col gap-y-0.5 px-2 items-center my-2.5 *:text-sm text-green-500 border-r">
+                                        <p>2{{index + 1}}</p>
+                                        <p>مرداد</p>
+                                        <p>140{{index + 1}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <div class="flex flex-col items-end sm:items-center sm:flex-row-reverse gap-3 mt-10">
+                <div>
+                    <img src="/images/contact.png" class="max-w-[300px]" alt="contact">
+                </div>
+                <div class="*:text-right flex flex-col items-end">
+                    <h2 class="font-morabba text-2xl">یکی از بهترین قهوه ها</h2>
+                    <p class="font-morabba-light my-1">...کیفیت قهوه را از ما بخواهید</p>
+                    <p class="my-2">...</p>
+                    <p class="leading-7 text-sm">فضای گرم و دنج ما را احساس کنید، جایی که همه می توانند قهوه معطری پیدا کنند و دسرهای خوشمزه ما را که کاملاً با قهوه داغ همراه شده است، امتحان کنند. فضای داخلی شیک و کارکنان خوش برخورد ما روز شما را می سازد!</p>
+                    <span class="flex mt-3 items-center w-fit p-2 text-sm  gap-x-1 justify-center border-2 border-primary2 rounded-full text-primary2 cursor-pointer">
+                        <Icon name="fe:phone" class="text-lg"/>
+                        ثبت سفارش تلفنی
+                    </span>
+                </div>
+            </div>
+            <div class="mt-16">
+                <ul class="p-2 gap-3 gap-y-6 grid grid-cols-1 sm-mobile:grid-cols-2 lg:grid-cols-4">
+                    <li class="w-full flex items-center justify-center">
+                        <div class="flex items-center flex-row-reverse gap-3">
+                            <img src="../public/images/svgs/services/support.svg" alt="icon">
+                            <div class="flex flex-col gap-y-2 text-right">
+                                <p class="!text-lg hover:text-primary2 transition-color">اکسسوری قهوه</p>
+                                <p class="text-xs">وسایل و ادوات دم آوری</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="w-full flex items-center justify-center">
+                        <div class="flex items-center flex-row-reverse gap-3">
+                            <img src="../public/images/svgs/services/pitcher.svg" alt="icon">
+                            <div class="flex flex-col gap-y-2 text-right">
+                                <p class="!text-lg hover:text-primary2 transition-color">اکسسوری قهوه</p>
+                                <p class="text-xs">وسایل و ادوات دم آوری</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="w-full flex items-center justify-center">
+                        <div class="flex items-center flex-row-reverse gap-3">
+                            <img src="../public/images/svgs/services/coffee.svg" alt="icon">
+                            <div class="flex flex-col gap-y-2 text-right">
+                                <p class="!text-lg hover:text-primary2 transition-color">اکسسوری قهوه</p>
+                                <p class="text-xs">وسایل و ادوات دم آوری</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="w-full flex items-center justify-center">
+                        <div class="flex items-center flex-row-reverse gap-3">
+                            <img src="../public/images/svgs/services/express-delivery.svg" alt="icon">
+                            <div class="flex flex-col gap-y-2 text-right">
+                                <p class="!text-lg hover:text-primary2 transition-color">اکسسوری قهوه</p>
+                                <p class="text-xs">وسایل و ادوات دم آوری</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
     </div>
 </template>
@@ -62,7 +144,7 @@ import TitleBar from '~/components/TitleBar.vue';
 import CartProduct from '~/components/CartProduct.vue';
 import CartPoster from '~/components/CartPoster.vue';
 import Catigory from '~/components/Catigory.vue';
-import SliderProduct from '~/components/SliderProduct.vue'
+import SliderProduct from '~/components/SliderProduct.vue';
 // posters Data 
 const dataPoster = ref([
     {
