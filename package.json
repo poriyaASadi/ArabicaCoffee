@@ -7,12 +7,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "@nuxt/icon": "^1.15.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@tailwindcss/vite": "^4.1.8",
+    "gh-pages": "^6.3.0",
     "nuxt": "^3.17.4",
     "nuxt-swiper": "^2.0.1",
     "tailwindcss": "^4.1.8",
